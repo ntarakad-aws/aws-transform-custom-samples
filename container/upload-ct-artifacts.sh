@@ -62,7 +62,7 @@ for conv_dir in "$CONV_BASE"/*/; do
   fi
 
   REPO_SLUG=$(basename "$REPO_PATH")
-  S3_PREFIX="s3://${S3_BUCKET}/${ANALYSIS_ID}/${REPO_SLUG}"
+  S3_PREFIX="s3://${S3_BUCKET}/${ANALYSIS_ID}/${REPO_SLUG}/${CONV_ID}"
 
   # code.zip — the entire working directory (whatever the TD wrote there)
   if [[ -d "$REPO_PATH" ]]; then
